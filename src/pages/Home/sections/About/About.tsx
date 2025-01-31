@@ -9,9 +9,11 @@ const About = () => {
         backgroundColor: theme.palette.primary.contrastText,
         [theme.breakpoints.up('xs')]:{ // <= mobile
             height: '100%',
+            paddingTop: '20px',
         },
         [theme.breakpoints.up('md')]:{ // <= mobile
             height: '100vh',
+            paddingTop: '40px',
         },
         
       }));

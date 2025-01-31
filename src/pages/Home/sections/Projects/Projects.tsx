@@ -14,6 +14,13 @@ const Projects = () => {
   const StyledProjects = styled("div")(({ theme }) => ({
     backgroundColor: theme.palette.primary.main,
     height: "100%",
+    [theme.breakpoints.up('xs')]:{ // <= mobile
+      paddingTop: '20px',
+  },
+  [theme.breakpoints.up('md')]:{ // >= mobile
+    paddingTop: '40px',
+    
+  },
   }));
   const StyledProject = styled("div",)(() => ({
     display: "flex",
@@ -30,8 +37,14 @@ const Projects = () => {
         },
     
   }));
-  const Styledimg = styled("img")(() => ({
-    height: "20rem",
+  const Styledimg = styled("img")(({theme}) => ({
+    [theme.breakpoints.up('xs')]:{ // <= mobile
+      height: '14rem'
+  },
+  [theme.breakpoints.up('md')]:{ // >= mobile
+    height: '22rem'
+    
+  },
   }));
   return (
     <>

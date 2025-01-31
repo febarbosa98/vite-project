@@ -20,7 +20,8 @@ const Hero = () => {
     alignItems: 'center',
     [theme.breakpoints.up('xs')]:{ // <= mobile
         paddingTop: '100px',
-        height: "100%"
+        height: "100%",
+        paddingBottom: '30px',
     },
     [theme.breakpoints.up('md')]:{ // >= mobile
       paddingTop: '0',
