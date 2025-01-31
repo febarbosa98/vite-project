@@ -31,7 +31,7 @@ const Projects = () => {
     
   }));
   const Styledimg = styled("img")(() => ({
-    height: "25rem",
+    height: "20rem",
   }));
   return (
     <>
