@@ -8,8 +8,7 @@ import { AnimatedBackground } from "../../../../componets/AnimatedBackground/Ani
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import { motion } from "motion/react"
-// import { animate, animateMini } from "motion";
+
 
 const curriculo = "./curriculo.pdf" 
 
@@ -21,7 +20,7 @@ const Hero = () => {
     [theme.breakpoints.up('xs')]:{ // <= mobile
         paddingTop: '100px',
         height: "100%",
-        paddingBottom: '30px',
+        paddingBottom: '20px'
     },
     [theme.breakpoints.up('md')]:{ // >= mobile
       paddingTop: '0',
@@ -74,18 +73,13 @@ const Hero = () => {
                 Fernando Barbosa
               </Typography>
                
-              <motion.div
-                initial={{ opacity: 0, x: 1000 }}
-                whileInView={{ opacity: 1, x: 0,  }}
-                // viewport={{root:  }}
-                
-                // initial={{ opacity: 0 }}
-              >
+              
+              <Typography color="primary.contrastText" variant="h2" textAlign="center" 
              
-              <Typography color="primary.contrastText" variant="h2" textAlign="center">
+                
+              >
                 Desenvolvedor Front End
               </Typography>
-                </motion.div>
               
               <Grid container display="flex" justifyContent="center" spacing={3} pt={3} pb={5}>
                 <Grid item xs={12} md={4} display="flex" justifyContent="center" >

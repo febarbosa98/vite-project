@@ -5,14 +5,13 @@ const NavBar = () => {
 
     const StyledToobar = styled(Toolbar)(() => ({
         display:'flex',
-        
+        justifyContent: 'space-evenly',
         [theme.breakpoints.up('xs')]:{ // <= mobile
           justifyContent: 'center',
       },
       [theme.breakpoints.up('md')]:{ // >= mobile
         justifyContent: 'space-evenly',
       },
-        
       }));
 
     return (
@@ -46,6 +45,7 @@ const NavBar = () => {
           </Typography></MenuItem>
             <MenuItem><Typography
             variant="h6"
+            noWrap
             component="a"
             href="#sobre"
             sx={{
@@ -59,9 +59,11 @@ const NavBar = () => {
                 fontSize: '16px',
                 justifyContent: 'center',
                 mr: -2,
+
             },
             [theme.breakpoints.up('md')]:{ // >= mobile
               fontSize: '1.125rem'
+              
             },
             }}
           >
@@ -69,6 +71,7 @@ const NavBar = () => {
           </Typography></MenuItem>
             <MenuItem><Typography
             variant="h6"
+            noWrap
             component="a"
             href="#project"
             sx={{
@@ -82,9 +85,11 @@ const NavBar = () => {
                 fontSize: '16px',
                 justifyContent: 'center',
                 mr: -2,
+
             },
             [theme.breakpoints.up('md')]:{ // >= mobile
               fontSize: '1.125rem'
+              
             },
             }}
           >

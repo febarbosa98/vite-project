@@ -13,12 +13,12 @@ import restaurante from "../../../../assets/img/restaurante.png";
 const Projects = () => {
   const StyledProjects = styled("div")(({ theme }) => ({
     backgroundColor: theme.palette.primary.main,
-    height: "100%",
     [theme.breakpoints.up('xs')]:{ // <= mobile
       paddingTop: '20px',
-  },
-  [theme.breakpoints.up('md')]:{ // >= mobile
-    paddingTop: '40px',
+    },
+    [theme.breakpoints.up('md')]:{ // >= mobile
+      paddingTop: '40px',
+      height: "100%",
     
   },
   }));
@@ -39,7 +39,7 @@ const Projects = () => {
   }));
   const Styledimg = styled("img")(({theme}) => ({
     [theme.breakpoints.up('xs')]:{ // <= mobile
-      height: '14rem'
+      height: '13rem'
   },
   [theme.breakpoints.up('md')]:{ // >= mobile
     height: '22rem'
