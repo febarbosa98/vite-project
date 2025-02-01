@@ -6,8 +6,10 @@ const NavBar = () => {
     const StyledToobar = styled(Toolbar)(() => ({
         display:'flex',
         justifyContent: 'space-evenly',
+        width: '100vw',
         [theme.breakpoints.up('xs')]:{ // <= mobile
           justifyContent: 'center',
+          
       },
       [theme.breakpoints.up('md')]:{ // >= mobile
         justifyContent: 'space-evenly',

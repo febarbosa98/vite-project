@@ -2,22 +2,29 @@ import {  Container, Grid, styled, Typography } from "@mui/material";
 import theme from "../../../../theme";
 import SchoolIcon from '@mui/icons-material/School';
 import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
+import { motion } from "motion/react"
+import { useRef } from "react";
 
 
 const About = () => {
     const StyledAbout = styled("div")(({theme}) => ({
         backgroundColor: theme.palette.primary.contrastText,
+        width: '100vw',
         [theme.breakpoints.up('xs')]:{ // <= mobile
-            height: '100%',
             paddingTop: '20px',
+            height: 'auto',
         },
         [theme.breakpoints.up('md')]:{ // <= mobile
             height: '100vh',
             paddingTop: '40px',
         },
+       
+        
         
       }));
       
+      const scrollRef = useRef(null)
+
       const StyledGrid = styled("div")(() => ({
         borderRadius: "3px",
         padding: "30px 0",
@@ -60,20 +67,36 @@ const About = () => {
             <Typography color="primary" variant="h1" textAlign="center" py={6}>Sobre mim</Typography>
                 <Grid container spacing={2} justifyContent={'center'} pb={4}>
                      <Grid item >
+                     <motion.div
+            initial={{ opacity: 0, x: -350,  display: 'inline' }}
+            whileInView={{ opacity: 1, x: 0, display: '' }}
+            transition={{duration: 0.5, ease: "easeOut"}}
+            viewport={{ root: scrollRef }}
+            >
+
+            
                 <StyledGrid>
                         <WorkspacePremiumIcon/>
                     <Typography fontWeight="600" variant="h5" >Experiencia</Typography>
                     <Typography variant="body1" >6 anos</Typography>
                     <Typography variant="body1" >Sub-Gerente em restaurante</Typography>
                 </StyledGrid>
+                </motion.div>
                     </Grid>
                     <Grid item>
+                    <motion.div
+            initial={{ opacity: 0, x: 350, display: 'inline'  }}
+            whileInView={{ opacity: 1,x: 0, display: '' }}
+            transition={{duration: 0.5, ease: "easeOut"}}
+            viewport={{ root: scrollRef }}
+            >
                 <StyledGrid>
                     <SchoolIcon/>
                     <Typography fontWeight="600" variant="h5" textAlign="center" >Escolaridade</Typography>
                     <Typography variant="body1" textAlign="center">Tecnologia</Typography>
                     <Typography variant="body1" textAlign="center">Analise e desenvolvimento de sistemas</Typography>
                 </StyledGrid>
+                </motion.div>
                     </Grid>
                 </Grid>
                 <Typography color="primary" variant="body1" fontSize={19} textAlign="justify" py={4}>
@@ -81,7 +104,12 @@ const About = () => {
                 </Typography>
                 <hr />
                 <Typography color="primary" variant="h1" textAlign="center" id='skills' py={6}>Habilidades</Typography>
-              
+                <motion.div
+            initial={{ opacity: 0, y: 100, display: 'inline'  }}
+            whileInView={{ opacity: 1, y: 0, display: '' }}
+            transition={{duration: 0.5, ease: "easeOut"}}
+            viewport={{ root: scrollRef }}
+            >
                     <Grid container spacing={2}  columns={{ xs: 4, md: 8 }} pb={5}>
                         <Grid  item xs={2} md={2}>
                     <StyledSkill>
@@ -125,7 +153,7 @@ const About = () => {
                         </Grid>
                    
                     </Grid>
-                
+                    </motion.div>
             </Container>
         </StyledAbout>
       </>

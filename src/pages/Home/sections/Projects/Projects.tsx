@@ -6,15 +6,20 @@ import onebitflix from "../../../../assets/img/onebitflix.png";
 import onebitx from "../../../../assets/img/onebitx.png";
 import pokedex from "../../../../assets/img/pokedex.png";
 import restaurante from "../../../../assets/img/restaurante.png";
+import { motion } from "motion/react"
+import { useRef } from "react";
 // import page from "../../../../assets/img/page.png";
 // import car from "../../../../assets/img/car.png";
+
 
 
 const Projects = () => {
   const StyledProjects = styled("div")(({ theme }) => ({
     backgroundColor: theme.palette.primary.main,
+    width: '100vw',
     [theme.breakpoints.up('xs')]:{ // <= mobile
       paddingTop: '20px',
+      
     },
     [theme.breakpoints.up('md')]:{ // >= mobile
       paddingTop: '40px',
@@ -46,6 +51,9 @@ const Projects = () => {
     
   },
   }));
+
+  const scrollRef = useRef(null)
+
   return (
     <>
       <StyledProjects id="project">
@@ -59,7 +67,14 @@ const Projects = () => {
             Projetos
           </Typography>
 
-          
+          <motion.div
+            initial={{ opacity: 0, y: 200, display: 'inline'  }}
+            whileInView={{ opacity: 1, y: 0, display: '' }}
+            transition={{duration: 0.5, type: "spring", ease: "easeOut"}}
+            viewport={{ root: scrollRef }}
+            >
+
+           
           <Grid container spacing={2}  columns={{ xs: 2, md: 4 }} pb={5}>
             <Grid item  xs={2} md={2}>
               <StyledProject>
@@ -305,7 +320,7 @@ const Projects = () => {
 
             
           </Grid>
-          
+          </motion.div>
         </Container>
       </StyledProjects>
     </>

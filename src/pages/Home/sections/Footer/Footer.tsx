@@ -6,6 +6,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 const Footer = () => {
     const Styledfooter = styled("div")(({ theme }) => ({
         backgroundColor: theme.palette.primary.contrastText,
+        width: '100vw',
         height: "20vh",
         paddingTop: '50px ',
       }));

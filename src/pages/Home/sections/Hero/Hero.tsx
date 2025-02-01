@@ -8,6 +8,8 @@ import { AnimatedBackground } from "../../../../componets/AnimatedBackground/Ani
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import { motion } from "motion/react"
+import { useRef } from "react";
 
 
 const curriculo = "./curriculo.pdf" 
@@ -17,6 +19,7 @@ const Hero = () => {
     backgroundColor: theme.palette.primary.main,
     display: 'flex',
     alignItems: 'center',
+    width: '100vw',
     [theme.breakpoints.up('xs')]:{ // <= mobile
         paddingTop: '100px',
         height: "100%",
@@ -25,6 +28,7 @@ const Hero = () => {
     [theme.breakpoints.up('md')]:{ // >= mobile
       paddingTop: '0',
       height: "100vh",
+      
     },
 
   }));
@@ -48,7 +52,7 @@ const Hero = () => {
     fontSize: 'large'
     
 }));
-
+const scrollRef = useRef(null)
   
 
   return (
@@ -68,18 +72,23 @@ const Hero = () => {
               </Box>
             </Grid>
             <Grid item xs={12} md={8}>
+
+              
+            <motion.div
             
+            initial={{ opacity: 0, x: 300, display: 'inline'  }}
+            whileInView={{ opacity: 1,x: 0, display: '' }}
+            transition={{duration: 0.5, ease: "easeOut"}}
+            viewport={{ root: scrollRef }}
+            >
               <Typography color="primary.contrastText" variant="h1" textAlign="center" pb={2} >
                 Fernando Barbosa
               </Typography>
                
-              
-              <Typography color="primary.contrastText" variant="h2" textAlign="center" 
-             
-                
-              >
+              <Typography color="primary.contrastText" variant="h2" textAlign="center">
                 Desenvolvedor Front End
               </Typography>
+                </motion.div>
               
               <Grid container display="flex" justifyContent="center" spacing={3} pt={3} pb={5}>
                 <Grid item xs={12} md={4} display="flex" justifyContent="center" >
