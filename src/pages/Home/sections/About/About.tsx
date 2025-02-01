@@ -9,16 +9,18 @@ import { useRef } from "react";
 const About = () => {
     const StyledAbout = styled("div")(({theme}) => ({
         backgroundColor: theme.palette.primary.contrastText,
-        width: '100vw',
+        width: '100%',
         [theme.breakpoints.up('xs')]:{ // <= mobile
             paddingTop: '20px',
-            height: 'auto',
+            height: '100%',
+            paddingBottom: '20px'
         },
         [theme.breakpoints.up('md')]:{ // <= mobile
-            height: '100vh',
+            height: '100%',
+            minHeight: '100vh',
             paddingTop: '40px',
+            paddingBottom: '40px'
         },
-       
         
         
       }));
@@ -62,14 +64,15 @@ const About = () => {
 
     return (
       <>
-        <StyledAbout id="sobre">
-            <Container maxWidth="xl" >
+        <StyledAbout id="sobre" >
+            <Container maxWidth="lg"  >
             <Typography color="primary" variant="h1" textAlign="center" py={6}>Sobre mim</Typography>
                 <Grid container spacing={2} justifyContent={'center'} pb={4}>
                      <Grid item >
                      <motion.div
-            initial={{ opacity: 0, x: -350,  display: 'inline' }}
-            whileInView={{ opacity: 1, x: 0, display: '' }}
+
+            initial={{ opacity: 0, scale: 0 }}
+            whileInView={{ opacity: 1, scale: 1, }}
             transition={{duration: 0.5, ease: "easeOut"}}
             viewport={{ root: scrollRef }}
             >
@@ -85,8 +88,8 @@ const About = () => {
                     </Grid>
                     <Grid item>
                     <motion.div
-            initial={{ opacity: 0, x: 350, display: 'inline'  }}
-            whileInView={{ opacity: 1,x: 0, display: '' }}
+            initial={{ opacity: 0, scale: 0,  }}
+            whileInView={{ opacity: 1, scale: 1, }}
             transition={{duration: 0.5, ease: "easeOut"}}
             viewport={{ root: scrollRef }}
             >
@@ -105,12 +108,12 @@ const About = () => {
                 <hr />
                 <Typography color="primary" variant="h1" textAlign="center" id='skills' py={6}>Habilidades</Typography>
                 <motion.div
-            initial={{ opacity: 0, y: 100, display: 'inline'  }}
-            whileInView={{ opacity: 1, y: 0, display: '' }}
+            initial={{ opacity: 0, y: 100, }}
+            whileInView={{ opacity: 1, y: 0, }}
             transition={{duration: 0.5, ease: "easeOut"}}
             viewport={{ root: scrollRef }}
             >
-                    <Grid container spacing={2}  columns={{ xs: 4, md: 8 }} pb={5}>
+                    <Grid container spacing={2}  columns={{ xs: 4, md: 8 }} pb={5} >
                         <Grid  item xs={2} md={2}>
                     <StyledSkill>
                         <Typography  variant="h5" >JavaScript</Typography>

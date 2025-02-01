@@ -16,7 +16,7 @@ import { useRef } from "react";
 const Projects = () => {
   const StyledProjects = styled("div")(({ theme }) => ({
     backgroundColor: theme.palette.primary.main,
-    width: '100vw',
+    width: '100%',
     [theme.breakpoints.up('xs')]:{ // <= mobile
       paddingTop: '20px',
       
@@ -35,7 +35,9 @@ const Projects = () => {
     padding: '15px',
     transition: '0.7s',
     borderRadius: '10px',
-    margin:'0 20px',
+    margin:'0px auto',
+    maxWidth: '528px',
+    minWidth: '300px',
     height:'100%',
     '&:hover':{
             backgroundColor: 'rgba(255, 255, 255, 0.03)',
@@ -45,10 +47,12 @@ const Projects = () => {
   }));
   const Styledimg = styled("img")(({theme}) => ({
     [theme.breakpoints.up('xs')]:{ // <= mobile
-      height: '13rem'
+      maxHeight: '20rem',
+      height: 'auto'
   },
   [theme.breakpoints.up('md')]:{ // >= mobile
-    height: '22rem'
+    maxHeight: '22rem',
+    height: '100%'
     
   },
   }));
@@ -69,8 +73,9 @@ const Projects = () => {
           </Typography>
 
           <motion.div
-            initial={{ opacity: 0, y: 200, display: 'inline'  }}
-            whileInView={{ opacity: 1, y: 0, display: '' }}
+          style={{margin:'0 20px' }}
+            initial={{ opacity: 0, y: 200, }}
+            whileInView={{ opacity: 1, y: 0, }}
             transition={{duration: 0.5, type: "spring", ease: "easeOut"}}
             viewport={{ root: scrollRef }}
             >

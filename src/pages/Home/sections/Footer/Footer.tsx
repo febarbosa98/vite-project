@@ -6,7 +6,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 const Footer = () => {
     const Styledfooter = styled("div")(({ theme }) => ({
         backgroundColor: theme.palette.primary.contrastText,
-        width: '100vw',
+        width: '100%',
         height: "20vh",
         paddingTop: '50px ',
       }));
@@ -24,8 +24,7 @@ const Footer = () => {
 
             <Grid container textAlign={'center'} columns={{ xs: 2, md: 4 }}>
             <Grid item xs={2} md={2}>
-            <Typography variant="h4">Desenvolvimento</Typography>
-            <Typography variant="body1" pt={1}>Fernando Barbosa</Typography>
+            <Typography variant="h4" pt={1}>Fernando Barbosa</Typography>
             <StyledSocialMedia>
 
                 <Link href='https://www.instagram.com/febarbosa98'> 

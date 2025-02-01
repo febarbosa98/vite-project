@@ -19,7 +19,7 @@ const Hero = () => {
     backgroundColor: theme.palette.primary.main,
     display: 'flex',
     alignItems: 'center',
-    width: '100vw',
+    width: '100%',
     [theme.breakpoints.up('xs')]:{ // <= mobile
         paddingTop: '100px',
         height: "100%",
@@ -75,9 +75,8 @@ const scrollRef = useRef(null)
 
               
             <motion.div
-            
-            initial={{ opacity: 0, x: 300, display: 'inline'  }}
-            whileInView={{ opacity: 1,x: 0, display: '' }}
+            initial={{ opacity: 0, x: 300,  }}
+            animate={{ opacity: 1,x: 0,  }}
             transition={{duration: 0.5, ease: "easeOut"}}
             viewport={{ root: scrollRef }}
             >
