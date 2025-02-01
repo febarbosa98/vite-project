@@ -63,7 +63,7 @@ const About = () => {
     return (
       <>
         <StyledAbout id="sobre">
-            <Container maxWidth="lg" >
+            <Container maxWidth="xl" >
             <Typography color="primary" variant="h1" textAlign="center" py={6}>Sobre mim</Typography>
                 <Grid container spacing={2} justifyContent={'center'} pb={4}>
                      <Grid item >

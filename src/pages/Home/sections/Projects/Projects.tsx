@@ -35,6 +35,7 @@ const Projects = () => {
     padding: '15px',
     transition: '0.7s',
     borderRadius: '10px',
+    margin:'0 20px',
     height:'100%',
     '&:hover':{
             backgroundColor: 'rgba(255, 255, 255, 0.03)',
