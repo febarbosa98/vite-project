@@ -1,12 +1,71 @@
-import { AppBar, MenuItem, styled, Toolbar, Typography } from "@mui/material"
+import { AppBar,  CssBaseline, Fab, Fade, Slide, styled, Toolbar,  Typography, useScrollTrigger } from "@mui/material"
 import theme from "../../theme";
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
-const NavBar = () => {
+
+
+interface Props {
+    window?: () => Window;
+  children?: React.ReactElement<unknown>;
+}
+function ScrollTop(props: Props) {
+  const { children, window } = props;
+  
+  const trigger = useScrollTrigger({
+    target: window ? window() : undefined,
+    disableHysteresis: true,
+    threshold: 100,
+  });
+
+  const handleClick = (event: React.MouseEvent<HTMLDivElement>) => {
+    const anchor = (
+      (event.target as HTMLDivElement).ownerDocument || document
+    ).querySelector('#inicio');
+
+    if (anchor) {
+      anchor.scrollIntoView({
+        block: 'center',
+      });
+    }
+  };
+
+  return (
+    <Fade in={trigger}>
+      <Box
+        onClick={handleClick}
+        role="presentation"
+        sx={{ position: 'fixed', bottom: 16, right: 16 }}
+      >
+        {children}
+      </Box>
+    </Fade>
+  );
+}
+
+
+function HideOnScroll(props: Props) {
+  const { children, window } = props;
+    const trigger = useScrollTrigger({
+    target: window ? window() : undefined,
+    
+  });
+
+  return (
+    <Slide appear={false} direction="down" in={!trigger}>
+      {children ?? <div />}
+    </Slide>
+  );
+}
+
+const NavBar = (props: Props) => {
 
     const StyledToobar = styled(Toolbar)(() => ({
         display:'flex',
         justifyContent: 'space-evenly',
         width: '100vw',
+        gap: '20px',
         [theme.breakpoints.up('xs')]:{ // <= mobile
           justifyContent: 'center',
           
@@ -18,9 +77,12 @@ const NavBar = () => {
 
     return (
       <>
-       <AppBar position="fixed">
+               
+        <CssBaseline />
+       <HideOnScroll {...props}>
+        <AppBar >
        <StyledToobar>
-            <MenuItem><Typography
+            <Typography
             variant="h6"
             component="a"
             href="#inicio"
@@ -34,7 +96,6 @@ const NavBar = () => {
               [theme.breakpoints.up('xs')]:{ // <= mobile
                 fontSize: '16px',
                 justifyContent: 'center',
-                mr: -2,
 
             },
             [theme.breakpoints.up('md')]:{ // >= mobile
@@ -44,8 +105,8 @@ const NavBar = () => {
             }}
           >
             Inico
-          </Typography></MenuItem>
-            <MenuItem><Typography
+          </Typography>
+            <Typography
             variant="h6"
             noWrap
             component="a"
@@ -60,7 +121,6 @@ const NavBar = () => {
               [theme.breakpoints.up('xs')]:{ // <= mobile
                 fontSize: '16px',
                 justifyContent: 'center',
-                mr: -2,
 
             },
             [theme.breakpoints.up('md')]:{ // >= mobile
@@ -70,8 +130,8 @@ const NavBar = () => {
             }}
           >
             Sobre
-          </Typography></MenuItem>
-            <MenuItem><Typography
+          </Typography>
+            <Typography
             variant="h6"
             noWrap
             component="a"
@@ -86,7 +146,6 @@ const NavBar = () => {
               [theme.breakpoints.up('xs')]:{ // <= mobile
                 fontSize: '16px',
                 justifyContent: 'center',
-                mr: -2,
 
             },
             [theme.breakpoints.up('md')]:{ // >= mobile
@@ -96,12 +155,19 @@ const NavBar = () => {
             }}
           >
             Projetos
-          </Typography></MenuItem>
+          </Typography>
             
        </StyledToobar>
        </AppBar>
+        </HideOnScroll>
+        <ScrollTop {...props}>
+        <Fab size="small" aria-label="scroll back to top">
+          <KeyboardArrowUpIcon />
+        </Fab>
+      </ScrollTop>
+       
       </>
-    )
+    );
   }
   
-  export default NavBar
+export default NavBar;

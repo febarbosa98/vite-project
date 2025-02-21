@@ -103,7 +103,12 @@ const About = () => {
                     </Grid>
                 </Grid>
                 <Typography color="primary" variant="body1" fontSize={19} textAlign="justify" py={4}>
-                Profissional dedicado com experiência sólida como subgerente de restaurante, especializado na gestão eficaz de operações de delivery e do salão. Demonstro habilidades excepcionais na coordenação de equipes, garantindo um ambiente de trabalho eficiente e acolhedor. Sou um comunicador eficaz e um líder motivador, capaz de identificar e resolver problemas rapidamente para garantir a satisfação dos clientes e o sucesso do negócio. Possuo conhecimentos básicos de programação, adquiridos através do meu atual curso de Análise e Desenvolvimento de Sistemas, o que me proporciona uma compreensão fundamental das tecnologias emergentes e sua aplicação prática nos negócios.
+                Profissional com experiência em gestão de equipes e operações no setor de alimentos e bebidas, atuando como subgerente de restaurante, com foco na administração eficiente do delivery e do salão. Possuo habilidades em liderança, organização e atendimento ao cliente, garantindo qualidade e resultados positivos em um ambiente dinâmico.
+
+Atualmente cursando Análise e Desenvolvimento de Sistemas na Universidade Nove de Julho (UNINOVE), tenho interesse em unir minha experiência em gestão com a área de tecnologia. Possuo conhecimentos básicos em programação e desenvolvimento web, com experiência prática em:
+
+Linguagens e Ferramentas: JavaScript, TypeScript, HTML, CSS, React e Node.js.
+Busco oportunidades para aplicar meus conhecimentos técnicos em soluções inovadoras, contribuindo tanto na área de tecnologia quanto no setor de gestão operacional.
                 </Typography>
                 <hr />
                 <Typography color="primary" variant="h1" textAlign="center" id='skills' py={6}>Habilidades</Typography>
