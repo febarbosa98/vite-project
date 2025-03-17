@@ -12,6 +12,51 @@ import { useRef } from "react";
 // import car from "../../../../assets/img/car.png";
 
 
+const Projetos = [
+  {
+    title: "OneBitFlix",
+    description: "um projeto inspirado na Netflix, feito no curso da OneBitcode. É um site de aulas on-line de programação. No Back-end foi utilizado o adminJS ligado ao PostgreSQL. Já no front-end foi utilizado o nextJS.",
+    image: onebitflix,
+    urlSite: "https://onebitflix-front.vercel.app/",
+    urlGit: "https://github.com/febarbosa98/onebitflix-front"
+  },
+  {
+    title: "OneBitX",
+    description: "OneBitX é um projeto com foco em praticar as matérias no módulo de Bootstrap,nele abortamos a framework do bootstrap,biblioteca de animação aos.js e tambem abordamos a responsividade",
+    image: onebitx,
+    urlSite: "https://obcx.netlify.app/",
+    urlGit: "https://github.com/febarbosa98/onebitx"
+  },
+  {
+    title: "Pokédex",
+    description: "Uma pokédex simples para encontrar o pokemon pelo nome ou numero, foi feito com HTML, CSS JavaScript.",
+    image: pokedex,
+    urlSite: "https://pokedex-psi-drab.vercel.app/",
+    urlGit: "https://github.com/febarbosa98/pokedex"
+  },
+  {
+    title: "Jogo da memória",
+    description: "Um jogo da memoria inspirado em rick and morty simples, foi feito com HTML, CSS JavaScript.",
+    image: jogo,
+    urlSite: "https://jogo-da-memoria-eight-pi.vercel.app/",
+    urlGit: "https://github.com/febarbosa98/jogo-da-memoria"
+  },
+  {
+    title: "Landing page de um restaurante",
+    description: "Uma landing page de um restaurante com algumas opções do cardapio e algumas avaliações feito com HTML, CSS, Jquery",
+    image: restaurante,
+    urlSite: "https://landing-page-eight-drab.vercel.app/",
+    urlGit: "https://github.com/febarbosa98/landingPage"
+  },
+  {
+    title: "Chat em tempo real",
+    description: "Um site onde é possível conversar em tempo real com os usuários, foi feito com HTML, CSS e JavaScript",
+    image: chat,
+    urlSite: "https://chat-frontend-c01y.onrender.com/",
+    urlGit: "https://github.com/febarbosa98/chat-tempo-real/"
+  },
+]
+
 
 const Projects = () => {
   const StyledProjects = styled("div")(({ theme }) => ({
@@ -82,246 +127,49 @@ const Projects = () => {
 
            
           <Grid container spacing={2}  columns={{ xs: 2, md: 4 }} pb={5}>
+               {Projetos.map((projeto, index)=>(
             <Grid item  xs={2} md={2}>
-              <StyledProject>
-                <Typography
+              <StyledProject key={index}>
+                  <Typography
                   color="primary.contrastText"
                   variant="h5"
                   pb={2}
                 >
-                  Onebitflix
+                  {projeto.title}
                 </Typography>
 
                 <Styledimg
-                  src={onebitflix}
+                  src={projeto.image}
                   alt="" 
                 />
 
-                <Typography
+        <Typography
                   color="primary.contrastText"
                   variant="body1"
                   textAlign="justify"
                   py={2}
                 >
-                  um projeto inspirado na Netflix, feito no curso da OneBitcode.
-                  É um site de aulas on-line de programação. No Back-end foi
-                  utilizado o adminJS ligado ao PostgreSQL. Já no front-end foi
-                  utilizado o nextJS.
+                  {projeto.description}
                 </Typography>
-                
 
                 <Grid container display="flex" justifyContent="center" spacing={3} py={3}>
                     <Grid item xs={12} md={4} display="flex" justifyContent="center" >
-                  <StyledButton onClick={() => window.open("https://onebitflix-front.vercel.app/", "_blank")}>
+                  <StyledButton onClick={() => window.open(projeto.urlSite, "_blank")}>
                     <Typography>Visitar projeto</Typography> 
                   </StyledButton>
                     </Grid>
                     <Grid item xs={12} md={4} display="flex" justifyContent="center">
-                  <StyledButton onClick={() => window.open("https://github.com/febarbosa98/onebitflix-front", "_blank")}>
+                  <StyledButton onClick={() => window.open(projeto.urlGit, "_blank")}>
                     <Typography>GitHub</Typography> 
                   </StyledButton>
                     </Grid>
-              </Grid>
-              </StyledProject>
-            </Grid>
-
-            <Grid item  xs={2} md={2}>
-              <StyledProject>
-                <Typography
-                  color="primary.contrastText"
-                  variant="h5"
-                  pb={2}
-                >
-                  OnebitX
-                </Typography>
-
-                <Styledimg
-                  src={onebitx}
-                  alt="" 
-                />
-
-                <Typography
-                  color="primary.contrastText"
-                  variant="body1"
-                  textAlign="justify"
-                  py={2}
-                >
-                  One BitX é um projeto com foco em praticar as matérias no módulo de Bootstrap,nele abortamos a framework do bootstrap,biblioteca de animação aos.js e tambem abordamos a responsividade
-                </Typography>
+                    </Grid>
+                
                 
 
-                <Grid container display="flex" justifyContent="center" spacing={3} py={3}>
-                    <Grid item xs={12} md={4} display="flex" justifyContent="center" >
-                  <StyledButton onClick={() => window.open("https://obcx.netlify.app/", "_blank")}>
-                    <Typography>Visitar projeto</Typography> 
-                  </StyledButton>
-                    </Grid>
-                    <Grid item xs={12} md={4} display="flex" justifyContent="center">
-                  <StyledButton onClick={() => window.open("https://github.com/febarbosa98/onebitx", "_blank")}>
-                    <Typography>GitHub</Typography> 
-                  </StyledButton>
-                    </Grid>
-              </Grid>
               </StyledProject>
             </Grid>
-            <Grid item  xs={2} md={2}>
-              <StyledProject>
-                <Typography
-                  color="primary.contrastText"
-                  variant="h5"
-                  pb={2}
-                >
-                  Pokédex
-                </Typography>
-
-                <Styledimg
-                  src={pokedex}
-                  alt="" 
-                />
-
-                <Typography
-                  color="primary.contrastText"
-                  variant="body1"
-                  textAlign="justify"
-                  py={2}
-                >
-                  Uma pokédex simples para encontrar o pokemon pelo nome ou numero, foi feito com HTML, CSS JavaScript.
-                </Typography>
-                
-
-                <Grid container display="flex" justifyContent="center" spacing={3} py={3}>
-                    <Grid item xs={12} md={4} display="flex" justifyContent="center" >
-                  <StyledButton onClick={() => {
-                     window.open("https://pokedex-psi-drab.vercel.app/", "_blank");
-                  }}>
-                    <Typography>Visitar projeto</Typography> 
-                  </StyledButton>
-                    </Grid>
-                    <Grid item xs={12} md={4} display="flex" justifyContent="center">
-                  <StyledButton onClick={() => window.open("https://github.com/febarbosa98/pokedex", "_blank")}>
-                    <Typography>GitHub</Typography> 
-                  </StyledButton>
-                    </Grid>
-              </Grid>
-              </StyledProject>
-            </Grid>
-            <Grid item  xs={2} md={2}>
-              <StyledProject>
-                <Typography
-                  color="primary.contrastText"
-                  variant="h5"
-                  pb={2}
-                >
-                  Jogo da memória 
-                </Typography>
-
-                <Styledimg
-                  src={jogo}
-                  alt="" 
-                />
-
-                <Typography
-                  color="primary.contrastText"
-                  variant="body1"
-                  textAlign="justify"
-                  py={2}
-                >
-                  Um jogo da memoria inspirado em rick and morty simples, foi feito com HTML, CSS JavaScript.
-                </Typography>
-                
-
-                <Grid container display="flex" justifyContent="center" spacing={3} py={3}>
-                    <Grid item xs={12} md={4} display="flex" justifyContent="center" >
-                  <StyledButton onClick={() => window.open("https://jogo-da-memoria-eight-pi.vercel.app/", "_blank")}>
-                    <Typography>Visitar projeto</Typography> 
-                  </StyledButton>
-                    </Grid>
-                    <Grid item xs={12} md={4} display="flex" justifyContent="center">
-                  <StyledButton onClick={() => window.open("https://github.com/febarbosa98/jogo-da-memoria", "_blank")}>
-                    <Typography>GitHub</Typography> 
-                  </StyledButton>
-                    </Grid>
-              </Grid>
-              </StyledProject>
-            </Grid>
-            <Grid item  xs={2} md={2}>
-              <StyledProject>
-                <Typography
-                  color="primary.contrastText"
-                  variant="h5"
-                  pb={2}
-                >
-                  Landing page de um restaurante 
-                </Typography>
-
-                <Styledimg
-                  src={restaurante}
-                  alt="" 
-                />
-
-                <Typography
-                  color="primary.contrastText"
-                  variant="body1"
-                  textAlign="justify"
-                  py={2}
-                >
-                  Uma landing page de um restaurante com algumas opções do cardapio e algumas avaliações feito com HTML, CSS, Jquery
-                </Typography>
-                
-
-                <Grid container display="flex" justifyContent="center" spacing={3} py={3}>
-                    <Grid item xs={12} md={4} display="flex" justifyContent="center" >
-                  <StyledButton onClick={() => window.open("https://landing-page-eight-drab.vercel.app/", "_blank")}>
-                    <Typography>Visitar projeto</Typography> 
-                  </StyledButton>
-                    </Grid>
-                    <Grid item xs={12} md={4} display="flex" justifyContent="center">
-                  <StyledButton onClick={() => window.open("https://github.com/febarbosa98/landingPage", "_blank")}>
-                    <Typography>GitHub</Typography> 
-                  </StyledButton>
-                    </Grid>
-              </Grid>
-              </StyledProject>
-            </Grid>
-            <Grid item  xs={2} md={2}>
-              <StyledProject>
-                <Typography
-                  color="primary.contrastText"
-                  variant="h5"
-                  pb={2}
-                >
-                 Chat em tempo real
-                </Typography>
-
-                <Styledimg
-                  src={chat}
-                  alt=""                   
-                />
-
-                <Typography
-                  color="primary.contrastText"
-                  variant="body1"
-                  textAlign="justify"
-                  py={2}
-                >
-                  Um site onde é possível conversar em tempo real com os usuários, foi feito com HTML, CSS e JavaScript
-                </Typography>
-                
-
-                <Grid container display="flex" justifyContent="center" spacing={3} py={3}>
-                    <Grid item xs={12} md={4} display="flex" justifyContent="center" >
-                  <StyledButton onClick={() => window.open("https://chat-frontend-c01y.onrender.com/", "_blank")}>
-                    <Typography>Visitar projeto</Typography> 
-                  </StyledButton>
-                    </Grid>
-                    <Grid item xs={12} md={4} display="flex" justifyContent="center">
-                  <StyledButton onClick={() => window.open("https://github.com/febarbosa98/chat-tempo-real/", "_blank")}>
-                    <Typography>GitHub</Typography> 
-                  </StyledButton>
-                    </Grid>
-              </Grid>
-              </StyledProject>
-            </Grid>
+               ))}
             
 
             
