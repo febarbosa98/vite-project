@@ -91,7 +91,7 @@ const scrollRef = useRef(null)
               
               <Grid container display="flex" justifyContent="center" spacing={3} pt={3} pb={5}>
                 <Grid item xs={12} md={4} display="flex" justifyContent="center" >
-                  <StyledButton onClick={() => console.log('')}>
+                  <StyledButton onClick={() => window.open(curriculo, '_blank')}>
                     <DownloadIcon />
                     <Typography 
                     component='a'
@@ -105,11 +105,11 @@ const scrollRef = useRef(null)
                   </StyledButton>
                 </Grid>
                 <Grid item xs={12} md={4} display="flex" justifyContent="center" >
-                  <StyledButton onClick={() => console.log('')}>
+                  <StyledButton onClick={() =>  window.location.href = "mailto:contato@febarbosa.tech"}>
                     <EmailIcon />
                     <Typography 
                     component='a'
-                    href="mailto:contato@febarbosa.tech"
+                    // href="mailto:contato@febarbosa.tech"
                     sx={{
                       color: 'inherit',
                       textDecoration: 'none',

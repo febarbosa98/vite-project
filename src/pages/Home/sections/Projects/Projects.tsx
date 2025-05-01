@@ -6,6 +6,8 @@ import onebitflix from "../../../../assets/img/onebitflix.png";
 import onebitx from "../../../../assets/img/onebitx.png";
 import pokedex from "../../../../assets/img/pokedex.png";
 import restaurante from "../../../../assets/img/restaurante.png";
+import gitUser from "../../../../assets/img/gitUser.png";
+import jokenpo from "../../../../assets/img/jokenpo.png";
 import { motion } from "motion/react"
 import { useRef } from "react";
 // import page from "../../../../assets/img/page.png";
@@ -13,6 +15,20 @@ import { useRef } from "react";
 
 
 const Projetos = [
+  {
+    title: "Perfil GitHub",
+    description: "Aplicação desenvolvida com React, Axios e Tailwind CSS para buscar e exibir perfis do GitHub. Mostra informações como nome, bio, localização, seguidores e repositórios, com design responsivo e tratamento de erros.",
+    image: gitUser,
+    urlSite: "https://api-git-one.vercel.app/",
+    urlGit: "https://github.com/febarbosa98/api-git"
+  },
+  {
+    title: "Pedra, papel e tesoura",
+    description: "Projeto interativo desenvolvido em um desafio do Frontend Mentor, focado em manipulação do DOM com JavaScript, layout responsivo com CSS e posicionamento avançado. Um jogo simples, visualmente atrativo e ótimo para praticar front-end.",
+    image: jokenpo,
+    urlSite: "https://jokenpo-vert.vercel.app/",
+    urlGit: "https://github.com/febarbosa98/jokenpo"
+  },
   {
     title: "OneBitFlix",
     description: "um projeto inspirado na Netflix, feito no curso da OneBitcode. É um site de aulas on-line de programação. No Back-end foi utilizado o adminJS ligado ao PostgreSQL. Já no front-end foi utilizado o nextJS.",
@@ -55,6 +71,7 @@ const Projetos = [
     urlSite: "https://chat-frontend-c01y.onrender.com/",
     urlGit: "https://github.com/febarbosa98/chat-tempo-real/"
   },
+  
 ]
 
 
