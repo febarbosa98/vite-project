@@ -81,8 +81,8 @@ const About = () => {
                 <StyledGrid>
                         <WorkspacePremiumIcon/>
                     <Typography fontWeight="600" variant="h5" >Experiencia</Typography>
-                    <Typography variant="body1" >6 anos</Typography>
-                    <Typography variant="body1" >Sub-Gerente em restaurante</Typography>
+                    <Typography variant="body1" >7 anos</Typography>
+                    <Typography variant="body1" >Sub-Gerente em Restaurante</Typography>
                 </StyledGrid>
                 </motion.div>
                     </Grid>
@@ -103,12 +103,22 @@ const About = () => {
                     </Grid>
                 </Grid>
                 <Typography color="primary" variant="body1" fontSize={19} textAlign="justify" py={4}>
-                Profissional com experiência em gestão de equipes e operações no setor de alimentos e bebidas, atuando como subgerente de restaurante, com foco na administração eficiente do delivery e do salão. Possuo habilidades em liderança, organização e atendimento ao cliente, garantindo qualidade e resultados positivos em um ambiente dinâmico.
+                Olá! Sou o Fernando Barbosa, tenho 26 anos e estou em transição de carreira para a área de Desenvolvimento Web. Atualmente curso Análise e Desenvolvimento de Sistemas na UNINOVE e me especializo em JavaScript, HTML, CSS, TypeScript, React e Next.js, com foco no desenvolvimento de interfaces modernas, responsivas e com excelente experiência para o usuário. <br /><br />
 
-Atualmente cursando Análise e Desenvolvimento de Sistemas na Universidade Nove de Julho (UNINOVE), tenho interesse em unir minha experiência em gestão com a área de tecnologia. Possuo conhecimentos básicos em programação e desenvolvimento web, com experiência prática em:
+Tenho uma rotina intensa de estudos práticos, projetos pessoais e cursos complementares, como a formação Full Stack JavaScript pela OneBit Code. Ao longo dessa jornada, venho aplicando versionamento com Git, consumo de APIs REST, componentização com React, manipulação de DOM e estilização com CSS moderno (Flexbox, Grid, media queries, variáveis e responsividade). Estou constantemente buscando aprimorar boas práticas de código, organização e usabilidade.<br /><br />
 
-Linguagens e Ferramentas: JavaScript, TypeScript, HTML, CSS, React e Node.js.
-Busco oportunidades para aplicar meus conhecimentos técnicos em soluções inovadoras, contribuindo tanto na área de tecnologia quanto no setor de gestão operacional.
+Antes de ingressar na tecnologia, atuei por quase 7 anos na hamburgueria Smart Burger, onde iniciei como copeiro e fui promovido a subgerente. Essa trajetória me proporcionou um forte senso de responsabilidade, liderança e visão operacional. Como subgerente, fui responsável por:<br /><br />
+
+- Supervisionar toda a operação do salão e do delivery, garantindo eficiência e qualidade no atendimento ao cliente;<br />
+- Criar e otimizar rotas de entrega, reduzindo o tempo dos motoboys e melhorando a experiência do cliente final;<br />
+- Realizar o controle de estoque, inventário e pedidos, utilizando planilhas para manter a operação sempre abastecida;<br />
+- Coordenar equipes multidisciplinares, promovendo uma rotina de trabalho fluida e colaborativa;<br />
+- Gerenciar o caixa e a parte financeira da loja utilizando o sistema ERP Eclética, com lançamentos, fechamentos diários e geração de relatórios.<br />
+- Treinamento e integração: participei ativamente da formação de novos funcionários, alinhando o time aos padrões da empresa.<br /><br />
+
+Essa vivência me preparou para lidar com pressão, resolução de problemas, gestão de pessoas e processos, além de desenvolver um olhar estratégico para eficiência e inovação, habilidades que agora levo comigo para minha atuação como desenvolvedor.<br /><br />
+
+Hoje, minha maior motivação está em transformar ideias em interfaces funcionais, acessíveis e bem construídas, contribuindo com projetos que impactem positivamente a vida das pessoas. Estou em busca da minha primeira oportunidade como Desenvolvedor Front-End, pronto para colaborar com times engajados, aprender continuamente e crescer na área de tecnologia.
                 </Typography>
                 <hr />
                 <Typography color="primary" variant="h1" textAlign="center" id='skills' py={6}>Habilidades</Typography>
