@@ -20,7 +20,7 @@ const Footer = () => {
     return (
       <>
         <Styledfooter>
-        <Container>
+        <Container maxWidth="lg">
 
             <Grid container textAlign={'center'} columns={{ xs: 2, md: 4 }}>
             <Grid item xs={2} md={2}>
@@ -48,7 +48,7 @@ const Footer = () => {
      
             </Grid>
             </Grid>
-            <Typography pt={5} textAlign={'center'}>
+            <Typography py={5} textAlign={'center'}>
       © {new Date().getFullYear()}  Todos os direitos reservados.
             </Typography>
         </Container>
