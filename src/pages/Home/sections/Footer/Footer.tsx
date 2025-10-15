@@ -44,7 +44,7 @@ const Footer = () => {
             <Grid item xs={2} md={2}>
             <Typography variant="h4">Contato</Typography>
             <Typography variant="body1" py={1}>+55 11 96025-5173</Typography>
-            <Link href="mailto:contato@febarbosa.tech" >contato@febarbosa.tech</Link>
+            <Link href="mailto:contato@febarbosa.xyz" >contato@febarbosa.xyz</Link>
      
             </Grid>
             </Grid>
