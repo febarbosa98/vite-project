@@ -103,7 +103,7 @@ const About = () => {
                     </Grid>
                 </Grid>
                 <Typography color="primary" variant="body1" fontSize={19} textAlign="justify" py={4}>
-                Olá! Sou o Fernando Barbosa, tenho 26 anos e estou em transição de carreira para a área de Desenvolvimento Web. Atualmente curso Análise e Desenvolvimento de Sistemas na UNINOVE e me especializo em JavaScript, HTML, CSS, TypeScript, React e Next.js, com foco no desenvolvimento de interfaces modernas, responsivas e com excelente experiência para o usuário. <br /><br />
+                Olá! Sou o Fernando Barbosa, tenho 27 anos e estou em transição de carreira para a área de Desenvolvimento Web. Atualmente curso Análise e Desenvolvimento de Sistemas na UNINOVE e me especializo em JavaScript, HTML, CSS, TypeScript, React e Next.js, com foco no desenvolvimento de interfaces modernas, responsivas e com excelente experiência para o usuário. <br /><br />
 
 Tenho uma rotina intensa de estudos práticos, projetos pessoais e cursos complementares, como a formação Full Stack JavaScript pela OneBit Code. Ao longo dessa jornada, venho aplicando versionamento com Git, consumo de APIs REST, componentização com React, manipulação de DOM e estilização com CSS moderno (Flexbox, Grid, media queries, variáveis e responsividade). Estou constantemente buscando aprimorar boas práticas de código, organização e usabilidade.<br /><br />
 

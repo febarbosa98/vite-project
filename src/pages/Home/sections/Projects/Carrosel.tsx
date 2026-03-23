@@ -13,6 +13,7 @@ import econverse from "../../../../assets/img/econverse.png";
 import tirarVisto from "../../../../assets/img/tirarvisto.png";
 import avanti from "../../../../assets/img/avanti.png";
 import pet from "../../../../assets/img/pet.png";
+import smash from "../../../../assets/img/smash.png";
 import { Grid } from '@mui/material';
 import StyledButton from '../../../../componets/StyledButton/StyledButton';
 
@@ -68,7 +69,14 @@ import StyledButton from '../../../../componets/StyledButton/StyledButton';
 function Carrosel() {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down("md"));
-    const projetos = [
+    const projetos = [{
+    title: "Smash burger",
+    description:
+      "Landing page institucional para uma hamburgueria, desenvolvida com Next.js, React, TypeScript e Tailwind CSS. O projeto apresenta a marca, destaca os burgers mais pedidos, lista unidades, exibe depoimentos de clientes e oferece uma área de contato.",
+    image: smash,
+    urlSite: "https://smash-burger-xi.vercel.app/",
+    urlGit: "https://github.com/febarbosa98/smash-burger",
+  },
   {
     title: "Perfil GitHub",
     description:
